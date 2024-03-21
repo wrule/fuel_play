@@ -19,7 +19,7 @@ impl MyContract for Contract {
 
   #[storage(read)]
   fn count() -> u64 {
-    storage.counter.read()
+    return storage.counter.read();
   }
 
   #[storage(read, write)]
