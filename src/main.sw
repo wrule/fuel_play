@@ -4,6 +4,8 @@ abi MyContract {
   fn test_function() -> bool;
   #[storage(read)]
   fn count() -> u64;
+  #[storage(read, write)]
+  fn increment();
 }
 
 storage {
@@ -18,5 +20,11 @@ impl MyContract for Contract {
   #[storage(read)]
   fn count() -> u64 {
     storage.counter.read()
+  }
+
+  #[storage(read, write)]
+  fn increment() {
+    let result = storage.counter.read() + 1;
+    storage.counter.write(result);
   }
 }
