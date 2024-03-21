@@ -1,3 +1,3 @@
 #!/bin/bash
 rm -rf ~/.fuel/wallets
-cp -r ./wallets ~/.fuel/
+cp -r ./.wallets ~/.fuel/wallets
