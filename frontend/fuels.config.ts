@@ -2,6 +2,7 @@ import { createConfig } from 'fuels';
 
 export default createConfig({
   contracts: [
+        '..',
   ],
   output: './src/sway-api',
 });
